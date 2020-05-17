@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+</head>
+<body>
+<form id="loadForm" action="/servlet_02/servlet_02" method="post">
+账号：<input id="uname" type="text" name="uname"/><br/>
+密码：<input id="upwd" type="password" name="upwd"/><br/>
+<input type="button" onclick="checkForm()" value="登录"><br/>
+<span id="msg" style="color: red"></span>
+</form>
+</body>
+<script type="text/javascript" src="/servlet_02/static/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+function checkForm(){
+	var uname=$("#uname").val();
+	var upwd=$("#upwd").val();
+	if(uname==null || uname=="")
+		{
+		$("#msg").html("*账号不能为空！");
+		return;
+		}
+	if(upwd==null || upwd=="")
+	{
+	$("#msg").html("*密码不能为空！");
+	return;
+	}
+	$("#loadForm").submit();
+}
+
+</script>
+</html>
