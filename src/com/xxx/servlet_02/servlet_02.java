@@ -65,7 +65,7 @@ public class servlet_02 extends HttpServlet {
 		if(conn==null)
 		{
 			System.out.println("conn 为NULL");
-			connect();
+			connect();//连接数据库
 			if(!connect())
 			return;
 		}	
